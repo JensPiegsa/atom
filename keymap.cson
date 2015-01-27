@@ -1,0 +1,62 @@
+# My keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * https://atom.io/docs/latest/customizing-atom#customizing-key-bindings
+# * https://atom.io/docs/latest/advanced/keymaps
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it here:
+# https://github.com/bevry/cson#what-is-cson
+
+'.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
+	'ctrl-alt-q': 'unset!'
+
+'body':
+	'ctrl-alt-down': 'unset!'
+
+'body .native-key-bindings':
+	'alt-down': 'unset!'
+	'alt-left': 'unset!'
+	'ctrl-d': 'unset!'
+
+'.platform-win32 atom-workspace atom-text-editor:not([mini])':
+	'ctrl-alt-[': 'unset!'
+
+'.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
+	'ctrl-d': 'unset!'
+
+'.platform-win32 atom-text-editor:not([mini]), .platform-linux atom-text-editor:not([mini])':
+	'ctrl-d': 'editor:delete-line'
+	'alt-up': 'editor:move-line-up'
+	'alt-down': 'editor:move-line-down'
+
+'.platform-win32, .platform-win32 .command-palette atom-text-editor':
+	'ctrl-3': 'command-palette:toggle'
+
+'.platform-win32 atom-workspace .editor:not(.mini)':
+  'ctrl-alt-down': 'editor:duplicate-lines'
+
+'.platform-win32 atom-workspace atom-text-editor:not([mini])':
+  'alt-left': 'editor:fold-current-row'
+
+'atom-workspace atom-text-editor:not([mini])':
+  'alt-right': 'editor:unfold-current-row'
+
+'atom-text-editor:not([mini])':
+	'alt-shift-r': 'find-and-replace:select-all'
