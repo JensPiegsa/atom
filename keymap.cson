@@ -23,31 +23,31 @@
 # This file uses CoffeeScript Object Notation (CSON).
 # If you are unfamiliar with CSON, you can read more about it here:
 # https://github.com/bevry/cson#what-is-cson
-
 '.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
-	'ctrl-alt-q': 'unset!'
+  'ctrl-alt-q': 'unset!'
 
 'body':
-	'ctrl-alt-down': 'unset!'
+   'ctrl-alt-down': 'unset!'
 
 'body .native-key-bindings':
-	'alt-down': 'unset!'
-	'alt-left': 'unset!'
-	'ctrl-d': 'unset!'
+  'alt-down': 'unset!'
+  'alt-left': 'unset!'
+  'ctrl-d': 'unset!'
 
-'.platform-win32 atom-workspace atom-text-editor:not([mini])':
-	'ctrl-alt-[': 'unset!'
+'.platform-win32 atom-workspace atom-text-editor:not([mini]), atom-workspace atom-text-editor:not([mini])':
+  'ctrl-alt-[': 'unset!'
 
 '.platform-win32 atom-text-editor, .platform-linux atom-text-editor':
-	'ctrl-d': 'unset!'
+  'ctrl-d': 'unset!'
+  'alt-ctrl-q': 'unset!'
 
 '.platform-win32 atom-text-editor:not([mini]), .platform-linux atom-text-editor:not([mini])':
-	'ctrl-d': 'editor:delete-line'
-	'alt-up': 'editor:move-line-up'
-	'alt-down': 'editor:move-line-down'
+  'ctrl-d': 'editor:delete-line'
+  'alt-up': 'editor:move-line-up'
+  'alt-down': 'editor:move-line-down'
 
 '.platform-win32, .platform-win32 .command-palette atom-text-editor':
-	'ctrl-3': 'command-palette:toggle'
+  'ctrl-3': 'command-palette:toggle'
 
 '.platform-win32 atom-workspace .editor:not(.mini)':
   'ctrl-alt-down': 'editor:duplicate-lines'
@@ -59,4 +59,4 @@
   'alt-right': 'editor:unfold-current-row'
 
 'atom-text-editor:not([mini])':
-	'alt-shift-r': 'find-and-replace:select-all'
+  'alt-shift-r': 'find-and-replace:select-all'
