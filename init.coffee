@@ -4,13 +4,14 @@
 # after packages are loaded/activated and after the previous editor state
 # has been restored.
 
-# Enables tab indention for new list items in markdown
+# Enables tab indention for list bullets in markdown
 atom.commands.add 'atom-text-editor', 'custom:smart-indent', ->
   editor = atom.workspace.getActiveTextEditor()
   selections = editor.getSelections()
   indentRowMode = false
   if selections.length == 1
-    range = selections[0].getBufferRange()
+    selection = selections[0]
+    range = selection.getBufferRange()
     if selection.isEmpty()
       precedingText = editor.getTextInBufferRange([[range.start.row, 0], [range.start.row, range.start.column]])
       RegExp = /^\s*\*\s*$/
