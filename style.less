@@ -1,0 +1,56 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed.
+ *
+ * If you are unfamiliar with LESS, you can read more about it here:
+ * http://www.lesscss.org
+ */
+
+.tree-view {
+
+}
+
+// style the background and foreground colors on the atom-text-editor-element
+// itself
+atom-text-editor {
+
+}
+
+// To style other content in the text editor's shadow DOM, use the ::shadow
+// expression
+atom-text-editor::shadow {
+  .gfm {
+    .raw, .raw .link {
+      color: #c8e;
+    }
+    .variable, .string.username {
+      color: #999;
+    }
+    .code {
+      .support {
+        color: #555;
+      }
+      .link {
+        color: #999;
+      }
+    }
+    .string {
+      .link { color: #A8FF60; }
+    }
+  }
+  .cursor-line {
+    background-color: rgba(99,99,99, 0.05);
+  }
+}
+
+.editor .cursor {
+  border-color: green;
+}
+
+.editor {
+    .wrap-guide {
+        visibility: hidden;
+    }
+}
