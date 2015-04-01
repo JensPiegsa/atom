@@ -38,7 +38,7 @@
   'alt-up': 'editor:move-line-up'
   'alt-down': 'editor:move-line-down'
 
-'.platform-win32, .platform-win32 .command-palette atom-text-editor':
+'.platform-win32, .platform-win32 .command-palette atom-text-editor !important':
   'ctrl-3': 'command-palette:toggle'
 
 '.platform-win32 atom-workspace .editor:not(.mini)':
@@ -67,3 +67,7 @@
 
 'atom-text-editor:not([mini])':
   'ctrl-tab':'editor:indent-selected-rows'
+
+'body':
+  'alt-shift-down': 'editor:add-selection-below'
+  'alt-shift-up': 'editor:add-selection-above'
